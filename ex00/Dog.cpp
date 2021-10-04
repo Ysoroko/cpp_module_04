@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:06:09 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/04 16:09:10 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/04 18:15:18 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Dog::Dog()
 {
-	this->type = "dog";
+	this->type = "Dog";
 	std::cout << "A dog was constructed\n";
 }
 
@@ -25,7 +25,7 @@ Dog::~Dog()
 
 Dog::Dog(Dog & ref)
 {
-	this->type = "dog";
+	this->type = ref.getType();
 	std::cout << "A dog was constructed from copy\n";
 }
 
@@ -35,7 +35,12 @@ Dog & Dog::operator=(Dog const & rhs)
 	return (*this);
 }
 
-void makeSound()
+void Dog::makeSound() const
 {
 	std::cout << "Woof woof\n";
+}
+
+std::string Dog::getType( void ) const
+{
+	return (this->type);
 }

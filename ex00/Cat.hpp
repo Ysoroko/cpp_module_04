@@ -6,18 +6,18 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:42:29 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/04 16:09:36 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/04 18:16:41 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 # define CAT_HPP
 
-#include "AAnimal.hpp"
+#include "Animal.hpp"
 
-class Cat: public AAnimal
+class Cat: public Animal
 {
-	protected:
+	private:
 		std::string	type;
 
 	public:
@@ -25,7 +25,8 @@ class Cat: public AAnimal
 		~Cat();
 		Cat(Cat & ref);
 		Cat & operator=(Cat const & rhs);
-		void makeSound();
+		void makeSound() const;
+		std::string getType( void ) const;
 };
 
 #endif

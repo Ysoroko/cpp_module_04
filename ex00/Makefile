@@ -6,7 +6,7 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/04 15:39:50 by ysoroko           #+#    #+#              #
-#    Updated: 2021/10/04 15:39:55 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/10/04 18:04:24 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,11 @@
 NAME		=	ex00
 
 SRC			=	main.cpp \
-				ClapTrap.cpp \
-				ScavTrap.cpp \
-				FragTrap.cpp \
-				DiamondTrap.cpp \
+				Animal.cpp \
+				Cat.cpp \
+				Dog.cpp \
+				WrongAnimal.cpp \
+				WrongCat.cpp \
 
 OBJS		=	$(SRC:.cpp=.o)
 

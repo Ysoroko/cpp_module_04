@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:40:13 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/04 16:04:21 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/04 17:58:18 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,12 @@ Animal & Animal::operator=(Animal const & rhs)
 	return (*this);
 }
 
-void Animal::makeSound()
+void Animal::makeSound() const
 {
 	std::cout << "... generic animal sound ...\n";
+}
+
+std::string Animal::getType( void ) const
+{
+	return (this->type);
 }

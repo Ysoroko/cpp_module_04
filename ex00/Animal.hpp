@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:40:20 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/04 16:05:24 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/04 18:18:03 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 # include <iostream>
 
-// Abstract class Animal
+// virtual member function = "method"
+// this makes the program to decide which method to use during the 
+// execution (and not compilation)
 class Animal
 {
 	protected:
@@ -23,14 +25,12 @@ class Animal
 
 	public:
 		Animal();
-		~Animal();
+		virtual ~Animal();
 		Animal(Animal & ref);
 		Animal & operator=(Animal const & rhs);
 
-		// virtual member function = "method"
-		// this makes the program to decide which method to use during the 
-		// execution (and not compilation)
-		virtual void makeSound();
+		virtual std::string getType( void ) const;
+		virtual void makeSound() const;
 };
 
 #endif
