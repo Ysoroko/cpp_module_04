@@ -6,17 +6,17 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:41:40 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/05 16:24:09 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/05 16:07:16 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 # define DOG_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Dog: public Animal
+class Dog: public AAnimal
 {
 	private:
 		std::string	type;
@@ -26,7 +26,7 @@ class Dog: public Animal
 		Dog();
 		~Dog();
 		Dog(Dog & ref);
-		//Dog(Animal const & ref);
+		//Dog(AAnimal const & ref);
 		Dog & operator=(Dog const & rhs);
 		void makeSound() const;
 		std::string getType( void ) const;

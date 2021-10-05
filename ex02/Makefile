@@ -6,19 +6,19 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/04 15:39:50 by ysoroko           #+#    #+#              #
-#    Updated: 2021/10/05 16:06:42 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/10/05 16:36:11 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # ------------------------------------- VARS ----------------------------------
 
-NAME		=	ex01
+NAME		=	ex02
 
 SRC			=	main.cpp \
-				Animal.cpp \
 				Cat.cpp \
 				Dog.cpp \
 				Brain.cpp \
+				AAnimal.cpp \
 
 OBJS		=	$(SRC:.cpp=.o)
 

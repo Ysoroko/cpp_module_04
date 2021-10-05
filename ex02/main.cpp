@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-
 
 // Shallow copy:
 // ----------------------------------------
@@ -33,8 +32,8 @@
 int main( void )
 {
 	// Exercice example
-	const Animal* dog = new Dog();
-	const Animal* cat = new Cat();
+	const AAnimal* dog = new Dog();
+	const AAnimal* cat = new Cat();
 
 	std::cout << std::endl;
 
@@ -65,7 +64,7 @@ int main( void )
 
 
 	// Array of animals
-	const Animal	*(animal_array[4]);
+	const AAnimal	*(animal_array[4]);
 	std::cout << std::endl;
 	// Half filled with dogs
 	for (int i = 0; i < 2; i++)
@@ -81,5 +80,7 @@ int main( void )
 		delete animal_array[i];
 	std::cout << std::endl;
 
+	// This will fail because AAnimal is abstract!
+	// const AAnimal a = new AAnimal();
 	system("leaks ex01");
 }

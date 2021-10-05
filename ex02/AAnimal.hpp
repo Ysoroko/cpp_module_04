@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 15:41:40 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/05 16:24:09 by ysoroko          ###   ########.fr       */
+/*   Created: 2021/10/04 15:40:20 by ysoroko           #+#    #+#             */
+/*   Updated: 2021/10/05 16:36:45 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef AANIMAL_HPP
+# define AANIMAL_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include <iostream>
 
-class Dog: public Animal
+// virtual member function = "method"
+// this makes the program to decide which method to use during the 
+// execution (and not compilation)
+class AAnimal
 {
-	private:
+	protected:
 		std::string	type;
-		Brain		*brain;
-
 	public:
-		Dog();
-		~Dog();
-		Dog(Dog & ref);
-		//Dog(Animal const & ref);
-		Dog & operator=(Dog const & rhs);
-		void makeSound() const;
-		std::string getType( void ) const;
-		Brain *getBrain( void ) const;
-		void compareTo(Dog const & other_dog) const;
+		AAnimal();
+		virtual ~AAnimal() = 0;
+		AAnimal(const AAnimal & ref);
+		AAnimal & operator=(AAnimal const & rhs);
+		virtual std::string getType( void ) const;
+		virtual void makeSound() const;
 };
 
 #endif

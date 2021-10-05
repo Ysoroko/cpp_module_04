@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 15:41:40 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/05 16:24:09 by ysoroko          ###   ########.fr       */
+/*   Created: 2021/10/05 10:19:38 by ysoroko           #+#    #+#             */
+/*   Updated: 2021/10/05 15:18:17 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <iostream>
 
-class Dog: public Animal
+class Brain
 {
 	private:
-		std::string	type;
-		Brain		*brain;
-
+		std::string	*ideas;
 	public:
-		Dog();
-		~Dog();
-		Dog(Dog & ref);
-		//Dog(Animal const & ref);
-		Dog & operator=(Dog const & rhs);
-		void makeSound() const;
-		std::string getType( void ) const;
-		Brain *getBrain( void ) const;
-		void compareTo(Dog const & other_dog) const;
+		Brain();
+		~Brain();
+		Brain(Brain & ref);
+		Brain & operator=(Brain const & rhs);
+		std::string *getIdeas();
+
 };
 
 #endif

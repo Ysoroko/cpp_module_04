@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 15:41:40 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/05 16:24:09 by ysoroko          ###   ########.fr       */
+/*   Created: 2021/10/04 15:42:29 by ysoroko           #+#    #+#             */
+/*   Updated: 2021/10/05 16:07:15 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Dog: public Animal
+class Cat: public AAnimal
 {
 	private:
 		std::string	type;
 		Brain		*brain;
 
 	public:
-		Dog();
-		~Dog();
-		Dog(Dog & ref);
-		//Dog(Animal const & ref);
-		Dog & operator=(Dog const & rhs);
+		Cat();
+		~Cat();
+		Cat(Cat & ref);
+		//Cat(AAnimal const & ref);
+		Cat & operator=(Cat const & rhs);
 		void makeSound() const;
 		std::string getType( void ) const;
 		Brain *getBrain( void ) const;
-		void compareTo(Dog const & other_dog) const;
+		void compareTo(Cat const & other_cat) const;
 };
 
 #endif
