@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:40:20 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/05 14:17:54 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/05 14:49:45 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Animal
 	public:
 		Animal();
 		virtual ~Animal();
-		Animal(Animal & ref);
+		Animal(const Animal & ref);
 		Animal & operator=(Animal const & rhs);
 
 		virtual std::string getType( void ) const;

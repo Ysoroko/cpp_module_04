@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:40:13 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/04 17:58:18 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/05 14:49:43 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Animal::~Animal()
 	std::cout << "Animal was destroyed\n";
 }
 
-Animal::Animal(Animal & ref)
+Animal::Animal(Animal const & ref)
 {
 	this->type = ref.type;
 	std::cout << "Animal was constructed from a copy\n";
