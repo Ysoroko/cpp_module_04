@@ -6,13 +6,13 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/04 15:39:50 by ysoroko           #+#    #+#              #
-#    Updated: 2021/10/04 18:04:24 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/10/05 13:38:08 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # ------------------------------------- VARS ----------------------------------
 
-NAME		=	ex00
+NAME		=	ex01
 
 SRC			=	main.cpp \
 				Animal.cpp \
@@ -20,6 +20,7 @@ SRC			=	main.cpp \
 				Dog.cpp \
 				WrongAnimal.cpp \
 				WrongCat.cpp \
+				Brain.cpp \
 
 OBJS		=	$(SRC:.cpp=.o)
 

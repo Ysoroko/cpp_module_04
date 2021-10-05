@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 10:31:38 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/05 10:47:56 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/05 14:02:37 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ Brain::Brain(Brain & ref)
 
 Brain & Brain::operator=(Brain const & rhs)
 {
-	this->ideas = rhs.ideas;
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = rhs.ideas[i];
 	return (*this);
 }
