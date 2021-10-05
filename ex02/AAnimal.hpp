@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:40:20 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/05 16:36:45 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/05 16:39:31 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class AAnimal
 		AAnimal(const AAnimal & ref);
 		AAnimal & operator=(AAnimal const & rhs);
 		virtual std::string getType( void ) const;
-		virtual void makeSound() const;
+		virtual void makeSound() const = 0;
 };
 
 #endif
