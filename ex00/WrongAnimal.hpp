@@ -23,7 +23,7 @@ class WrongAnimal
 
 	public:
 		WrongAnimal();
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 		WrongAnimal(WrongAnimal & ref);
 		WrongAnimal & operator=(WrongAnimal const & rhs);
 
