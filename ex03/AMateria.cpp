@@ -1,32 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:46:28 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 10:11:50 by ysoroko          ###   ########.fr       */
+/*   Created: 2021/10/06 09:52:06 by ysoroko           #+#    #+#             */
+/*   Updated: 2021/10/06 09:52:11 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#include "AMateria.hpp"
 
-# include "AMateria.hpp"
-
-class Ice : public AMateria
-{
-	public:
-		Ice();
-		~Ice();
-		Ice(Ice const & ref);
-		Ice & operator=(Ice const & ref);
-		std::string getType( void ) const;
-		Ice *clone() const;
-		void use(ICharacter& target) const;
-	private:
-		std::string _type;
-};
-
-#endif

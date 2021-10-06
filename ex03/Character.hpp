@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:46:28 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 10:11:50 by ysoroko          ###   ########.fr       */
+/*   Created: 2021/10/06 10:14:53 by ysoroko           #+#    #+#             */
+/*   Updated: 2021/10/06 10:37:28 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
-# include "AMateria.hpp"
+# include "ICharacter.hpp"
 
-class Ice : public AMateria
+class Character : public ICharacter
 {
 	public:
-		Ice();
-		~Ice();
-		Ice(Ice const & ref);
-		Ice & operator=(Ice const & ref);
-		std::string getType( void ) const;
-		Ice *clone() const;
-		void use(ICharacter& target) const;
+		Character(std::string name);
+		~Character();
+		std::string const & getName() const = 0;
+		void equip(AMateria* m);
+		void unequip(int idx);
+		void use(int idx, ICharacter& target) = 0;
 	private:
-		std::string _type;
+		AMateria			*(inventory[4]);
+		std::string const	name;
 };
 
 #endif
