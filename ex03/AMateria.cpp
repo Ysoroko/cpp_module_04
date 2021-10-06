@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 15:34:53 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 15:42:46 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/06 15:45:25 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ std::string const & AMateria::getType() const
 	return(this->_type);
 }
 
-void use(ICharacter& target)
+void AMateria::use(ICharacter& target)
 {
 	std::cout << "AMateria abstractly used on " << target.getName() << std::endl;
 }
