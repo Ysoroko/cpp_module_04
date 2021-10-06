@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 10:43:52 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 15:55:38 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/06 16:39:56 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,15 @@ void Character::equip(AMateria* m)
 {
 	int i = 0;
 
-	while ((this->_inventory)[i] == 0 && i < 4)
+	while ((this->_inventory)[i] != 0 && i < 4)
 		i++;
 	if (i >= 4)
+	{
+		std::cout << "Can't equip more than 4 Materia";
 		return ;
+	}
 	(this->_inventory)[i] = m;
+	std::cout << "Materia " << m->getType() << " equipped in slot " << i << "\n";
 }
 
 void Character::unequip(int idx)
@@ -82,8 +86,11 @@ void Character::use(int idx, ICharacter& target)
 {
 	std::string	name = this->getName();
 
-	if (!(this->_inventory)[idx])
+	if (idx < 0 || idx >= 4 || !(this->_inventory)[idx])
+	{
+		std::cout << "Nothing found to use at the index " << idx << std::endl;
 		return ;
+	}
 	std::cout << name;
 	((this->_inventory)[idx])->use(target);
 }
