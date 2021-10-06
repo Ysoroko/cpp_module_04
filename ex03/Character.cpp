@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 10:43:52 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 14:29:45 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/06 15:33:05 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ Character & Character::operator=(Character const & ref)
 		if (ref._inventory[i])
 			this->_inventory[i] = (ref._inventory[i])->clone();
 	}
+	return (*this);
 }
 
 void Character::equip(AMateria* m)

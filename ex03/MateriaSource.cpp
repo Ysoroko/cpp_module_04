@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 11:32:02 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 14:41:27 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/06 15:37:15 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ MateriaSource & MateriaSource::operator=(MateriaSource const & ref)
 		if (ref._inventory[i])
 			this->_inventory[i] = (ref._inventory[i])->clone();
 	}
+	return (*this);
 }
 
 MateriaSource::~MateriaSource()
@@ -74,7 +75,7 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 	if (i >= 4)
 	{
 		std::cout << "Specified materia type does not exit\n";
-		return ;
+		return (NULL);
 	}
 	return (((this->_inventory)[i])->clone());
 }

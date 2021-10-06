@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 09:52:17 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 10:39:53 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/06 15:17:19 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Ice *Ice::clone() const
 	return (ret);
 }
 
-void Ice::use(ICharacter& target) const
+void Ice::use(ICharacter& target)
 {
 	std::string target_name = target.getName();
 

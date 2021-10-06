@@ -6,7 +6,7 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/04 15:39:50 by ysoroko           #+#    #+#              #
-#    Updated: 2021/10/06 15:06:49 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/10/06 15:37:41 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ NAME		=	ex03
 
 SRC			=	main.cpp \
 				AMateria.cpp \
-				Materia.cpp \
 				Character.cpp \
 				Cure.cpp \
 				Ice.cpp \
@@ -27,7 +26,7 @@ OBJS		=	$(SRC:.cpp=.o)
 COMPILE		=	clang++
 
 # -std=c++98 displays an error if an unauthorized function is left in the code
-FLAGS		=	-Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
+FLAGS		=	-Wall -Wextra -Werror -std=c++98
 
 EXE_NAME	=	-o $(NAME)
 

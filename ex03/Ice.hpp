@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:46:28 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 10:11:50 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/06 15:17:12 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Ice : public AMateria
 		Ice & operator=(Ice const & ref);
 		std::string getType( void ) const;
 		Ice *clone() const;
-		void use(ICharacter& target) const;
+		void use(ICharacter& target);
 	private:
 		std::string _type;
 };

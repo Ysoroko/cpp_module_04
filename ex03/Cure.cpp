@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 09:53:18 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 10:42:35 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/06 15:35:25 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Cure *Cure::clone() const
 	return (ret);
 }
 
-void Cure::use(ICharacter& target) const
+void Cure::use(ICharacter& target)
 {
 	std::string target_name = target.getName();
 
