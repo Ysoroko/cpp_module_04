@@ -6,7 +6,7 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/04 15:39:50 by ysoroko           #+#    #+#              #
-#    Updated: 2021/10/06 09:54:02 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/10/06 15:06:49 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,11 @@ NAME		=	ex03
 
 SRC			=	main.cpp \
 				AMateria.cpp \
-				ICharacter.cpp \
-				IMateriaSource.cpp \
+				Materia.cpp \
+				Character.cpp \
 				Cure.cpp \
 				Ice.cpp \
+				MateriaSource.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
 

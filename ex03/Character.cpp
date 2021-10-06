@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 10:43:52 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 11:22:06 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/06 14:29:45 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void Character::equip(AMateria* m)
 {
 	int i = 0;
 
-	while ((this->_inventory)[i] == 0)
+	while ((this->_inventory)[i] == 0 && i < 4)
 		i++;
 	if (i >= 4)
 		return ;
