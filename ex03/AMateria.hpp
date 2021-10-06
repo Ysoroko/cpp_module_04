@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:40:47 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 15:41:42 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/06 16:04:06 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class AMateria
 		AMateria(std::string const & type);
 		virtual ~AMateria();
 		AMateria(AMateria const & ref);
-		std::string const & getType() const; //Returns the materia type
+		virtual std::string const & getType() const; //Returns the materia type
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter& target);
 };

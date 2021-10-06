@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 09:52:30 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 15:17:10 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/06 16:04:52 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cure : public AMateria
 		~Cure();
 		Cure(Cure const & ref);
 		Cure & operator=(Cure const & ref);
-		std::string getType( void ) const;
+		std::string const & getType() const;
 		Cure *clone() const;
 		void use(ICharacter& target);
 	private:

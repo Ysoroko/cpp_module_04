@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 09:53:18 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 15:35:25 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/06 16:05:46 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Cure & Cure::operator=(Cure const & ref)
 	return (*this);
 }
 
-std::string Cure::getType( void ) const
+std::string const & Cure::getType( void ) const
 {
 	return (this->_type);
 }
