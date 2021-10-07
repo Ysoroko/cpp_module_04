@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 09:52:17 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 16:05:59 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/07 14:54:28 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Ice::Ice(Ice const & ref) : _type(ref.getType())
 
 Ice & Ice::operator=(Ice const & ref)
 {
-	this->_type = ref.getType();
+	std::cout << "Assigned from " << ref.getType() << std::endl;
 	return (*this);
 }
 

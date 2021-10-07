@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 11:23:38 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/07 12:00:58 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/07 14:53:21 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,17 @@ void ft_tests()
 	// Create Materia
 	std::cout << "CREATE MATERIA:" << std::endl;
 	std::cout << "-----------------------" << std::endl;
-	AMateria* tmp;
+	AMateria	*tmp;
+	AMateria	*tmp1;
+	AMateria	*tmp2;
+	AMateria	*tmp3;
+	AMateria	*tmp4;
+
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
-	tmp = src->createMateria("cure");
+	tmp1 = src->createMateria("cure");
 	me->equip(tmp);
-	tmp = src->createMateria("fire");
+	tmp = src->createMateria("fire"); // null
 	me->equip(tmp);
 	std::cout << std::endl;
 
@@ -58,9 +63,9 @@ void ft_tests()
 	std::cout << "DEEP COPY CHARACTER:" << std::endl;
 	std::cout << "-----------------------" << std::endl;
 	Character	*charles = new Character("Charles");
-	tmp = src->createMateria("cure");
+	tmp2 = src->createMateria("cure");
 	charles->equip(tmp);
-	tmp = src->createMateria("ice");
+	tmp3 = src->createMateria("ice");
 	charles->equip(tmp);
 	tmp = src->createMateria("earth");
 	charles->equip(tmp);
@@ -71,7 +76,9 @@ void ft_tests()
 	std::cout << "DEEP COPY VS SOURCE:" << std::endl;
 	std::cout << "-----------------------" << std::endl;
 	charles->unequip(0); // this shows that they have different materia pointers equipped
-	charles_copy->unequip(1);
+	tmp4 = charles_copy->getMateriaFromInventory(1);
+	charles_copy->unequip(1); //this will produce a leak if we don't store the address somewhere else before
+	delete tmp4;
 	tmp = src->createMateria("cure");
 	charles_copy->equip(tmp);
 	tmp = src->createMateria("ice");
@@ -109,22 +116,22 @@ void ft_tests()
 	delete src;
 	delete charles;
 	delete charles_copy;
+	//delete tmp;
+	delete tmp1;
+	delete tmp2;
+	delete tmp3;
 	std::cout << std::endl;
 
-	// Leaks check
-	std::cout << "LEAKS:" << std::endl;
-	std::cout << "-----------------------" << std::endl;
-
-	// #include <stdlib.h>
-	// char **str_tav = (char **)malloc(sizeof(*str_tav) * 8);
-	// str_tav[0] = (char *)malloc(sizeof(char) * 10);
-	// str_tav[0] = NULL;
-	system("leaks ex03");
+	
+	//system("leaks ex03");
 }
 
 int main()
 {
 	ft_tests();
-	//system("leaks ex03");
+	// Leaks check
+	std::cout << "LEAKS:" << std::endl;
+	std::cout << "-----------------------" << std::endl;
+	system("leaks ex03");
 	return (0);
 }

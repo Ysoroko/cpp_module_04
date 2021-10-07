@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 09:53:18 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/07 12:11:38 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/07 14:54:24 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Cure::Cure(Cure const & ref) : _type(ref.getType())
 
 Cure & Cure::operator=(Cure const & ref)
 {
-	this->_type = ref.getType();
+	std::cout << "Assigned from " << ref.getType() << std::endl;
 	return (*this);
 }
 

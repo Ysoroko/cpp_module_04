@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 10:43:52 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/07 11:49:54 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/07 14:42:30 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,4 +105,10 @@ void Character::use(int idx, ICharacter& target)
 	}
 	std::cout << name;
 	((this->_inventory)[idx])->use(target);
+}
+
+// used to avoid leaks when using unequip with a deep copy character
+AMateria	*Character::getMateriaFromInventory(int idx)
+{
+	return (this->_inventory)[idx];
 }
