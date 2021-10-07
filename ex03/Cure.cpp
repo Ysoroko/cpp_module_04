@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 09:53:18 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/06 16:05:46 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/07 12:11:38 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ICharacter.hpp"
 #include "IMateriaSource.hpp"
 
-Cure::Cure() : _type("ice")
+Cure::Cure() : _type("cure")
 {
 	std::cout << this->_type << " constructed\n";
 }
