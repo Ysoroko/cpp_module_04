@@ -82,5 +82,5 @@ int main( void )
 
 	// This will fail because AAnimal is abstract!
 	// const AAnimal a = new AAnimal();
-	system("leaks ex01");
+	system("leaks ex02");
 }
