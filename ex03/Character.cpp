@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 10:43:52 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/07 14:42:30 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/26 16:37:25 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Character::Character(std::string name) : _name(name)
 {
-	std::cout << "A character named " << _name << " was created\n";
+	std::cout << "A character named \"" << _name << "\" was created\n";
 	for(int i = 0; i < 4; i++)
 	{
 		this->_inventory[i] = 0;

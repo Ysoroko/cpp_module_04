@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 11:23:38 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/07 14:53:21 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/26 16:42:34 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void ft_tests()
 	std::cout << "CREATE MATERIA:" << std::endl;
 	std::cout << "-----------------------" << std::endl;
 	AMateria	*tmp;
+	
 	AMateria	*tmp1;
 	AMateria	*tmp2;
 	AMateria	*tmp3;
@@ -42,7 +43,7 @@ void ft_tests()
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
 	tmp1 = src->createMateria("cure");
-	me->equip(tmp);
+	me->equip(tmp1);
 	tmp = src->createMateria("fire"); // null
 	me->equip(tmp);
 	std::cout << std::endl;
@@ -64,9 +65,9 @@ void ft_tests()
 	std::cout << "-----------------------" << std::endl;
 	Character	*charles = new Character("Charles");
 	tmp2 = src->createMateria("cure");
-	charles->equip(tmp);
+	charles->equip(tmp2);
 	tmp3 = src->createMateria("ice");
-	charles->equip(tmp);
+	charles->equip(tmp3);
 	tmp = src->createMateria("earth");
 	charles->equip(tmp);
 	Character	*charles_copy = new Character(*charles);
@@ -116,13 +117,9 @@ void ft_tests()
 	delete src;
 	delete charles;
 	delete charles_copy;
-	//delete tmp;
 	delete tmp1;
 	delete tmp2;
-	delete tmp3;
 	std::cout << std::endl;
-
-	
 	//system("leaks ex03");
 }
 
