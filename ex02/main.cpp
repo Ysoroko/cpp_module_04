@@ -34,6 +34,7 @@ int main( void )
 	// Exercice example
 	const AAnimal* dog = new Dog();
 	const AAnimal* cat = new Cat();
+	// const  AAnimal *d = new AAnimal();
 
 	std::cout << std::endl;
 
